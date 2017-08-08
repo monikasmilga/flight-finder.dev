@@ -42,12 +42,11 @@ class CreateAdmin extends Command
         $email = $this->ask('insert email');
         $password = $this->secret('insert password');
 
-        $record = User::create([
+        User::create([
             'name' => $name,
             'email' => $email,
-            'password' => bcrypt($password),
+            'password' => bcrypt($password)
 
         ]);
-        $record->roles()->sync('super-admin');
     }
 }
