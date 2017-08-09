@@ -55,9 +55,17 @@
                 </table>
 
             @else
+                {{--<div class="create-button">--}}
+                {{--<a href="{{$route}}}">--}}
+                {{--<button type="button" class="btn btn-secondary">Create new {{strtolower(substr($pageTitle, 0, -1))}} record--}}
+                {{--</button>--}}
+                {{--</a>--}}
+                {{--</div>--}}
+
                 <div class="create-button">
-                    <a href="{{$route}}}">
-                        <button type="button" class="btn btn-secondary">Create new {{strtolower(substr($pageTitle, 0, -1))}} record
+                    <a href="{{ $route }}">
+                        <button type="button" class="btn btn-secondary">
+                            Create new {{strtolower(substr($pageTitle, 0, -1))}} record
                         </button>
                     </a>
                 </div>
@@ -90,15 +98,16 @@
                 <h1 class="pageTitle">{{$pageTitle}}</h1>
 
                 <div class="create-button">
-                    <a href="{{$route}}}">
-                        <button type="button" class="btn btn-secondary">Create new {{strtolower(substr($pageTitle, 0, -1))}} record
+                    <a href="{{ $route }}">
+                        <button type="button" class="btn btn-secondary">Create
+                            new {{strtolower(substr($pageTitle, 0, -1))}} record
                         </button>
                     </a>
                 </div>
             @endif
             <h1 class="pageTitle">No data available</h1>
 
-            
+
         @endif
     </div>
 
