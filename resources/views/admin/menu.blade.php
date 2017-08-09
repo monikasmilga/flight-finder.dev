@@ -1,14 +1,9 @@
 <div id="menu">
-    <h3>
-        MENU
-        {{--{{trans('app.admin-menu')}}--}}
-    </h3>
-    <ul>
-        <li><a href="{{route('app.language.index')}}">{{trans('app.language')}}</a></li>
-        <li><a href="{{route('app.menu.index')}}">{{trans('app.menu')}}</a></li>
-        <li><a href="{{route('app.categories.index')}}">{{trans('app.categories')}}</a></li>
-        <li><a href="{{route('app.pages.index')}}">{{trans('app.pages')}}</a></li>
-        <li><a href="{{route('app.users.index')}}">{{trans('app.users')}}</a></li>
-        <li><a href="{{route('app.order.index')}}">{{trans('app.orders')}}</a></li>
-    </ul>
+    <nav class="nav flex-column">
+        <h3>MENU</h3>
+        <a class="nav-link active" href="{{route('app.countries.index')}}">Countries</a>
+        <a class="nav-link" href="{{route('app.airports.index')}}">Airports</a>
+        <a class="nav-link" href="{{route('app.airlines.index')}}">Airlines</a>
+        <a class="nav-link" href="{{route('app.flights.index')}}">Flights</a>
+    </nav>
 </div>
