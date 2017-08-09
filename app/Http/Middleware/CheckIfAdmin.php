@@ -1,10 +1,15 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: Monika
+ * Date: 8/9/2017
+ * Time: 9:15 AM
+ */
 
 namespace App\Http\Middleware;
-
 use Closure;
 
-class AdminCheck
+class CheckIfAdmin
 {
     /**
      * Handle an incoming request.
@@ -15,7 +20,7 @@ class AdminCheck
      */
     public function handle($request, Closure $next)
     {
-        if(auth()->user())
+        if( auth()->user())
         {
             return $next($request);
         } else {
