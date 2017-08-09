@@ -1,7 +1,21 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Monika
- * Date: 8/8/2017
- * Time: 3:14 PM
- */
+@extends('admin.main')
+
+@section('content')
+    <div class="page-content">
+
+        <div class="container">
+        <h1 class="pageTitle">{{$pageTitle}}</h1>
+
+        <form>
+            <div class="form-group">
+
+                <label>Airline name</label>
+                <input class="form-control" placeholder="Enter airline name">
+
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        </div>
+
+    </div>
+@endsection

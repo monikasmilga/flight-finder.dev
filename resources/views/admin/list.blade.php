@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="list">
+    <div class="page-content">
         @if(isset($list[0]) || isset($list['data'][0]))
 
         <h1 class="pageTitle">{{$pageTitle}}</h1>

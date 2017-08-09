@@ -27,8 +27,11 @@ class FFAirlinesController extends Controller {
 	 */
 	public function create()
 	{
-		//
-	}
+        $config['pageTitle'] = 'Airlines';
+
+
+        return view('admin.formAirlines', $config);
+    }
 
 	/**
 	 * Store a newly created resource in storage.
