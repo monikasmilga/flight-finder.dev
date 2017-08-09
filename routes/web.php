@@ -80,10 +80,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin-check']], fun
 });
 
 
-//Route::group(['prefix' => '/'], function () {
-//
-//    return view('welcome');
-//
-//});
+Route::get('/home', function () {
+    return view('home');
+});
 
 
