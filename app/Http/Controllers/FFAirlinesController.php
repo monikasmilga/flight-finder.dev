@@ -15,6 +15,7 @@ class FFAirlinesController extends Controller {
 	{
         $config['list'] = FFAirlines::get()->toArray();
         $config['pageTitle'] = 'Airlines';
+        $config['route'] = route('app.airlines.create');
 
         return view('admin.list', $config);
 	}

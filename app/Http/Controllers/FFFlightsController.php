@@ -16,6 +16,7 @@ class FFFlightsController extends Controller
     {
         $config['list'] = FFFlights::get()->toArray();
         $config['pageTitle'] = 'Flights';
+        $config['route'] = route('app.flights.create');
 
         return view('admin.list', $config);
     }

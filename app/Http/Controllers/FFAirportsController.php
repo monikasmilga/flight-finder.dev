@@ -16,6 +16,7 @@ class FFAirportsController extends Controller {
 	{
         $config['list'] = FFAirports::get()->toArray();
         $config['pageTitle'] = 'Airports';
+        $config['route'] = route('app.airports.create');
 
         return view('admin.list', $config);
     }

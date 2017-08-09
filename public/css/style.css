@@ -29,13 +29,10 @@ html, body {
     margin-top: 0px;
 }
 
-
-/*.pagination>li>a{*/
-    /*background-color: #eee;*/
-
-
-/*}*/
 #disabled-link {
     background-color: #eee;
+}
 
+.create-button {
+    margin: 20px 0px;
 }
