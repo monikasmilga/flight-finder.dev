@@ -28,7 +28,9 @@ class FFFlightsController extends Controller
      */
     public function create()
     {
-        //
+        $config['pageTitle'] = 'Flights';
+
+        return view('admin.formFlights', $config);
     }
 
     /**

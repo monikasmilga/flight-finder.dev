@@ -28,7 +28,8 @@ class FFAirportsController extends Controller {
 	 */
 	public function create()
 	{
-		//
+        $config['pageTitle'] = 'Airports';
+        return view('admin.formAirports', $config);
 	}
 
 	/**
