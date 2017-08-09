@@ -12,8 +12,8 @@ class FFAirportsController extends Controller {
 	 */
 	public function index()
 	{
-		//
-	}
+        return view ('admin.list');
+    }
 
 	/**
 	 * Show the form for creating a new resource.
