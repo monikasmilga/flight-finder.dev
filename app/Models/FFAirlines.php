@@ -4,6 +4,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class FFAirlines extends CoreModel {
 
-	protected $fillable = [];
+    protected $table = 'ff_airlines';
+
+    protected $fillable = ['id', 'name'];
 
 }
