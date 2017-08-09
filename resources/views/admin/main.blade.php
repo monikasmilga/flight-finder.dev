@@ -6,12 +6,12 @@
     <title>Flight finder</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    {{--<link rel="stylesheet" href="{{asset('css/custom.css')}}"> // if necessary in the future--}}
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
 </head>
 <body>
 
 @include('admin.menu')
-
+@yield('content')
 
 
 </body>
