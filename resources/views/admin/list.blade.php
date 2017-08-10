@@ -5,9 +5,10 @@
     <div class="page-content">
         @if(isset($list[0]) || isset($list['data'][0]))
 
-            <h1 class="pageTitle">{{$pageTitle}}</h1>
 
             @if($pageTitle == 'Countries')
+                <h1 class="pageTitle">{{$pageTitle}}</h1>
+
                 <nav aria-label="Page navigation example">
                     <ul class="pagination">
                         @if(($list["current_page"]) === 1)
@@ -20,7 +21,8 @@
 
                         @for($i=1; $i<=$list['last_page']; $i++)
                             <li class="page-item"><a class="page-link"
-                                                     href="{{route('app.countries.index')}}?page={{$i}}">{{$i}}</a></li>
+                                                     href="{{route('app.countries.index')}}?page={{$i}}">{{$i}}</a>
+                            </li>
                         @endfor
 
                         @if(($list["current_page"]) === $list['last_page'])
@@ -54,13 +56,9 @@
                     </tbody>
                 </table>
 
+
             @else
-                {{--<div class="create-button">--}}
-                {{--<a href="{{$route}}}">--}}
-                {{--<button type="button" class="btn btn-secondary">Create new {{strtolower(substr($pageTitle, 0, -1))}} record--}}
-                {{--</button>--}}
-                {{--</a>--}}
-                {{--</div>--}}
+                <h1 class="pageTitle">{{$pageTitle}}</h1>
 
                 <div class="create-button">
                     <a href="{{ $route }}">
@@ -95,15 +93,21 @@
 
         @else
             @if(isset($pageTitle))
-                <h1 class="pageTitle">{{$pageTitle}}</h1>
+                @if($pageTitle == 'Countries')
+                    <h1 class="pageTitle">{{$pageTitle}}</h1>
+                    <h6>Data base seeds available, ask your beloved programmer to run command</h6>
+                @else
 
-                <div class="create-button">
-                    <a href="{{ $route }}">
-                        <button type="button" class="btn btn-secondary">Create
-                            new {{strtolower(substr($pageTitle, 0, -1))}} record
-                        </button>
-                    </a>
-                </div>
+                    <h1 class="pageTitle">{{$pageTitle}}</h1>
+
+                    <div class="create-button">
+                        <a href="{{ $route }}">
+                            <button type="button" class="btn btn-secondary">Create
+                                new {{strtolower(substr($pageTitle, 0, -1))}} record
+                            </button>
+                        </a>
+                    </div>
+                @endif
             @endif
             <h1 class="pageTitle">No data available</h1>
 
