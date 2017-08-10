@@ -13,7 +13,7 @@
                     <label for="exampleSelect1">Country of origin</label>
                     <select class="form-control form-control-lg" name="origin_id">
                         <option value="" disabled selected>Select origin</option>
-                        @foreach($origin_country as $origin_id => $origin_name)
+                        @foreach($origin_airport as $origin_id => $origin_name)
                             <option value="{{ $origin_id }}">{{ $origin_name }}</option>
                         @endforeach
                     </select>
@@ -23,7 +23,7 @@
                     <label for="exampleSelect1">Country of destination</label>
                     <select class="form-control form-control-lg" name="destination_id">
                         <option value="" disabled selected>Select destination</option>
-                        @foreach($destination_country as $destination_id => $destination_name)
+                        @foreach($destination_airport as $destination_id => $destination_name)
                             <option value="{{ $destination_id }}">{{ $destination_name }}</option>
                         @endforeach
                     </select>
