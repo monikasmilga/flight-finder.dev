@@ -77,6 +77,14 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin-check']], fun
             Route::get('/', ['as' => 'app.countries.show', 'uses' => 'FFCountriesController@show']);
         });
     });
+
+    Route::get('/faker', ['as' => 'app.faker.index', 'uses' => 'FakeDataController@index']);
+
+//    Route::post('/faker', ['as' => 'app.faker.fakeFlights', 'uses' => 'FakeDataController@fakeFlights']);
+//    Route::post('/faker', ['as' => 'app.faker.fakeAirports', 'uses' => 'FakeDataController@fakeAirports']);
+    Route::post('/faker', ['as' => 'app.faker.fakeAirlines', 'uses' => 'FakeDataController@fakeAirlines']);
+
+
 });
 
 
