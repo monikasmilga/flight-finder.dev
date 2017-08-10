@@ -28,13 +28,23 @@ class FakeDataController extends Controller
 
     public function fakeAirports()
     {
+
+//        $faker = Factory::create();
 //
+//        for ($i=0; $i <= 100; $i++) {
+//            FFAirlines::create([
+//                'name' => $faker->company,
+//                'id' =>
+//            ]);
+//        }
+//        return redirect()->route('app.airports.index');
+
+
     }
 
 
     public function fakeAirlines()
     {
-
         $faker = Factory::create();
 
         for ($i=0; $i <= 100; $i++) {
