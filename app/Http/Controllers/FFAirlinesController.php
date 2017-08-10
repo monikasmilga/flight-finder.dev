@@ -2,6 +2,7 @@
 
 use App\Models\FFAirlines;
 use Illuminate\Routing\Controller;
+use Ramsey\Uuid\Uuid;
 
 class FFAirlinesController extends Controller {
 
@@ -30,7 +31,6 @@ class FFAirlinesController extends Controller {
 	{
         $config['pageTitle'] = 'Airlines';
 
-
         return view('admin.formAirlines', $config);
     }
 
@@ -42,7 +42,15 @@ class FFAirlinesController extends Controller {
 	 */
 	public function store()
 	{
-		//
+//	    dd("labas");
+		$data = request()->all();
+//		$data['id'] = Uuid::uuid4();
+
+		FFAirlines::create([
+		    'name' => $data['name']
+        ]);
+
+		return redirect()->route('app.airlines.index');
 	}
 
 	/**
