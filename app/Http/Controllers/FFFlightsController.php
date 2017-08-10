@@ -1,7 +1,10 @@
 <?php namespace App\Http\Controllers;
 
+use App\Models\FFAirlines;
+use App\Models\FFCountries;
 use App\Models\FFFlights;
 use Illuminate\Routing\Controller;
+use Carbon\Carbon;
 
 class FFFlightsController extends Controller
 {
@@ -30,6 +33,11 @@ class FFFlightsController extends Controller
     public function create()
     {
         $config['pageTitle'] = 'Flights';
+        $config['origin_country'] = FFCountries::pluck('name', 'id');
+        $config['destination_country'] = FFCountries::pluck('name', 'id');
+        $config['airline'] = FFAirlines::pluck('name', 'id');
+        $config['arrival_date'] = Carbon::now('Europe/Vilnius');
+        $config['departure_date'] = Carbon::now('Europe/Vilnius');
 
         return view('admin.formFlights', $config);
     }
@@ -42,7 +50,18 @@ class FFFlightsController extends Controller
      */
     public function store()
     {
-        //
+        $data = request()->all();
+//        dd($data);
+
+        FFFlights::create([
+            'origin_id' => $data['origin_id'],
+            'destination_id' => $data['destination_id'],
+            'departure' => $data['departure_date'],
+            'arrival' => $data['arrival_date']
+
+        ]);
+
+        return redirect()->route('app.flights.index');
     }
 
     /**

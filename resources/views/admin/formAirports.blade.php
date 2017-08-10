@@ -20,7 +20,7 @@
 
                 <div class="form-group">
                     <label for="exampleSelect1">Country</label>
-                    <select class="form-control form-control-lg" id="exampleSelect1" name="country_id">
+                    <select class="form-control form-control-lg" name="country_id">
                         <option value="" disabled selected>Select country</option>
                         @foreach($country_id as $key => $country)
                             <option value="{{ $key }}">{{ $country }}</option>
