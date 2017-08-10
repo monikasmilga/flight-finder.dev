@@ -42,7 +42,6 @@ class FFAirlinesController extends Controller {
 	 */
 	public function store()
 	{
-//	    dd("labas");
 		$data = request()->all();
 //		$data['id'] = Uuid::uuid4();
 
