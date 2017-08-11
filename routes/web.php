@@ -91,5 +91,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin-check']], fun
 Route::get('/home', function () {
     return view('home');
 });
+Route::get('/search', ['as' => 'app.front-end.index', 'uses' => 'FFFrontEndController@index']);
 
 
