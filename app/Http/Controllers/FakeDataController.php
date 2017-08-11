@@ -79,7 +79,7 @@ class FakeDataController extends Controller
         $time = Carbon::create(rand(2017, 2018), rand(1,12), rand(1,31), rand(0,23), rand(0, 59), rand(0,59) );
         $faker = Factory::create();
 
-        for ($i = 1; $i <= 5; $i++) {
+        for ($i = 1; $i <= 100; $i++) {
             FFFlights::create([
                 'id'=> $faker->uuid,
                 'origin_id' => FFAirports::all()->random()->id,

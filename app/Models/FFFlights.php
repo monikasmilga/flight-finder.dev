@@ -8,4 +8,12 @@ class FFFlights extends CoreModel {
 
     protected $fillable = ['id', 'origin_id', 'destination_id', 'arrival', 'departure', 'airline_id'];
 
+    protected $with = ['airportName'];
+
+    public function airportName(){
+
+        return $this->hasOne(FFAirlines::class, 'id', 'airline_id');
+
+    }
+
 }

@@ -82,7 +82,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin-check']], fun
 
     Route::post('/faker', ['as' => 'app.faker.fakeFlights', 'uses' => 'FakeDataController@fakeFlights']);
 //    Route::post('/faker', ['as' => 'app.faker.fakeAirports', 'uses' => 'FakeDataController@fakeAirports']);
-//    Route::post('/faker', ['as' => 'app.faker.fakeAirlines', 'uses' => 'FakeDataController@fakeAirlines']);
+//    Route::post('/faker', ['as' => 'app.faker.fakeAirlines', 'uses' => 'FakeDataController@fakeAirlines']); // airlines seed available
 
 
 });

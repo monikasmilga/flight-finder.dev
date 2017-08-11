@@ -18,7 +18,7 @@
         {{--<div class="form-group">--}}
             {{--<form method="post" action="{{ route ( 'app.faker.fakeAirports' ) }}">--}}
                 {{--{{Form::token()}}--}}
-                {{--<h4>Pushing this button will create 100 fake airline records</h4>--}}
+                {{--<h4>Pushing this button will create 100 fake airport records</h4>--}}
                 {{--<button class="btn btn-info" type="submit">Fake airports</button>--}}
             {{--</form>--}}
         {{--</div>--}}
