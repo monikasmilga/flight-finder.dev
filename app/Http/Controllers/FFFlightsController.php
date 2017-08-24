@@ -18,7 +18,12 @@ class FFFlightsController extends Controller
      */
     public function index()
     {
-        $config['list'] = FFFlights::get()->toArray();
+        $config['list'] = FFFlights::paginate(15)->toArray();
+//        dd($config);
+        foreach ($config['list']['data'] as $key => &$value){
+            $value['airport_name'] = $value['airport_name']['name'];
+        }
+
         $config['pageTitle'] = 'Flights';
         $config['route'] = route('app.flights.create');
 

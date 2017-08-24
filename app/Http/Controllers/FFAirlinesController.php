@@ -14,7 +14,7 @@ class FFAirlinesController extends Controller {
 	 */
 	public function index()
 	{
-        $config['list'] = FFAirlines::get()->toArray();
+        $config['list'] = FFAirlines::paginate(15)->toArray();
         $config['pageTitle'] = 'Airlines';
         $config['route'] = route('app.airlines.create');
 
