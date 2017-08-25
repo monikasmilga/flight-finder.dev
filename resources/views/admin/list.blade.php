@@ -92,8 +92,7 @@
             <h1 class="pageTitle">No data available</h1>
 
         @endif
+
     </div>
-
-
 
 @endsection

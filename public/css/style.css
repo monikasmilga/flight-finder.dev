@@ -44,3 +44,11 @@ a:not([href]):not([tabindex]) {
 .pageTitle {
     text-align: center;
 }
+
+.card-body {
+    width: 400px;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #eee;
+}

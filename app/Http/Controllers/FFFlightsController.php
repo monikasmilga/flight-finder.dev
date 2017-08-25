@@ -26,6 +26,7 @@ class FFFlightsController extends Controller
 
         $config['pageTitle'] = 'Flights';
         $config['route'] = route('app.flights.create');
+        $config['faker'] = route('app.flights.faker');
 
         return view('admin.list', $config);
     }

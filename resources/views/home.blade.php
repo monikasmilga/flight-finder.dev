@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+
+
 @section('content')
 <div class="container">
     <div class="row">
@@ -11,6 +13,13 @@
                     You are logged in!
                 </div>
             </div>
+
+            <a href="http://flight-finder.dev/admin/countries">
+                <button type="button" class="btn btn-secondary">
+                    View and edit database
+                </button>
+            </a>
+
         </div>
     </div>
 </div>

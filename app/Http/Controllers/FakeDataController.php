@@ -20,10 +20,19 @@ class FakeDataController extends Controller
 
     public function index()
     {
-//        $routes['airports'] = route('app.faker.fakeAirports');
-//        $routes['airlines'] = route('app.faker.fakeAirlines');
-        $routes['flights'] = route('app.faker.fakeFlights');
+        return view('admin.faker');
+    }
 
+    public function flightsIndex()
+    {
+        $routes['flights'] = route('app.flights.faker');
+
+        return view('admin.faker', $routes);
+    }
+
+    public function airportsIndex()
+    {
+        $routes['airports'] = route('app.airports.faker');
 
         return view('admin.faker', $routes);
     }
@@ -42,30 +51,30 @@ class FakeDataController extends Controller
 
 //TODO : secure from repetitive
 
-    public function fakeAirports()
-    {
-
-        $faker = Factory::create();
-
-        for ($i = 0; $i <= 100; $i++) {
-            FFAirports::create([
-                'name' => $faker->company,
-                'id' => $this->generateAirportId(),
-                'city' => $faker->city,
-                'country_id' => FFCountries::all()->random()->id,
-            ]);
-        }
-        return redirect()->route('app.airports.index');
-
-
-    }
+//    public function fakeAirports()
+//    {
+//
+//        $faker = Factory::create();
+//
+//        for ($i = 0; $i <= 100; $i++) {
+//            FFAirports::create([
+//                'name' => $faker->company,
+//                'id' => $this->generateAirportId(),
+//                'city' => $faker->city,
+//                'country_id' => FFCountries::all()->random()->id,
+//            ]);
+//        }
+//        return redirect()->route('app.airports.index');
+//
+//
+//    }
 
 
     public function fakeAirlines()
     {
         $faker = Factory::create();
 
-        for ($i = 1; $i <= 100; $i++) {
+        for ($i = 1; $i <= 5; $i++) {
             FFAirlines::create([
                 'name' => $faker->company
             ]);
@@ -79,7 +88,7 @@ class FakeDataController extends Controller
         $time = Carbon::create(rand(2017, 2018), rand(1,12), rand(1,31), rand(0,23), rand(0, 59), rand(0,59) );
         $faker = Factory::create();
 
-        for ($i = 1; $i <= 100; $i++) {
+        for ($i = 1; $i <= 5; $i++) {
             FFFlights::create([
                 'id'=> $faker->uuid,
                 'origin_id' => FFAirports::all()->random()->id,
