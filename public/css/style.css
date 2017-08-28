@@ -52,3 +52,8 @@ a:not([href]):not([tabindex]) {
     margin-bottom: 20px;
     background-color: #eee;
 }
+
+.fakedata {
+    text-align: center;
+    margin: 10% 30% ;
+}

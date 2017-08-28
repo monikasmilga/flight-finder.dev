@@ -16,24 +16,14 @@
 
                     {{ Form::select('origin_id', $origin_id) }}
 
-                    {{--<select class="form-control form-control-lg" name="origin_id">--}}
-                    {{--<option value="" disabled selected>Select airport</option>--}}
-                    {{--@foreach($origin_id as $key => $origin)--}}
-                    {{--<option value="{{ $key }}">{{ $origin }}</option>--}}
-                    {{--@endforeach--}}
-                    {{--</select>--}}
+
                 </div>
 
                 <div class="form-group">
                     <label>To</label>
 
                     {{ Form::select('destination_id', $destination_id) }}
-                    {{--<select class="form-control form-control-lg" name="destination_id">--}}
-                    {{--<option value="" disabled selected>Select airport</option>--}}
-                    {{--@foreach($destination_id as $key => $destination)--}}
-                    {{--<option value="{{ $key }}">{{ $destination }}</option>--}}
-                    {{--@endforeach--}}
-                    {{--</select>--}}
+
 
 
                 </div>
@@ -42,8 +32,7 @@
                     <label>Date</label>
                     {{ Form::date('departure', $date) }}
 
-                    {{--<label for="example-datetime-local-input">Date</label>--}}
-                    {{--<input class="form-control" type="date" value="{{  $date }}" name="departure">--}}
+
                 </div>
 
 
