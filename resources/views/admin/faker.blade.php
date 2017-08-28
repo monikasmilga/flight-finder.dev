@@ -1,35 +1,15 @@
 @extends('admin.main')
 
 @section('content')
-    <div class="page-content">
+    <div class="page-content" id="fakedatacontent">
 
         <h1 class="pageTitle">Fake data generator</h1>
 
-
-        <a href="{{  route('app.airports.faker') }}"><button type="submit" class="btn btn-primary">Create fake airport records</button></a>
-
-
-        <a href="{{  route('app.flights.faker') }}"><button type="submit" class="btn btn-primary">Create fake flight records</button></a>
-
-
-
-        {{--<div class="form-group">--}}
-            {{--<form method="post" action="{{ route ( 'app.flights.faker' ) }}">--}}
-                {{--{{Form::token()}}--}}
-                {{--<h4>Pushing this button will create 100 fake airline records</h4>--}}
-                {{--<button class="btn btn-info" type="submit">Fake flights</button>--}}
-            {{--</form>--}}
-        {{--</div>--}}
-
-
-        {{--<div class="form-group">--}}
-            {{--<form method="post" action="{{ route ( 'app.airports.faker' ) }}">--}}
-                {{--{{Form::token()}}--}}
-                {{--<h4>Pushing this button will create 100 fake airport records</h4>--}}
-                {{--<button class="btn btn-info" type="submit">Fake airports</button>--}}
-            {{--</form>--}}
-        {{--</div>--}}
-
+        <div class="fakedata"><h4>If you want to generate fake data to analyse the app, you can do this through Command
+                Line or Terminal using PHP Artisan commands. <br/> To generate fake airports use "php artisan
+                fakedata:airports". <br/>To generate fake flights use "php artisan fakedata:flights".</h4></div>
+        <div class="fakedata"><h6>Fake data generating through admin panel has been removed. If you want this function
+                restored, contact your beloved programmer.</h6></div>
 
     </div>
 @endsection
