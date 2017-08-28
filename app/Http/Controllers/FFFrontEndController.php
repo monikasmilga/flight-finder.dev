@@ -20,11 +20,12 @@ class FFFrontEndController extends Controller
         $config['destination_id'] = FFAirports::pluck('name', 'id');
         $config['date'] = Carbon::now('Europe/Vilnius')->format('Y-m-d');
         $config['flights'] = $this->getFlights();
+
 //        $config['flights']['airline_name'] = $config['flights']['airline_name']['name'];
 
 //        dd($config['flights'][0]['airport_name']);
 
-        return view('front-end.search', $config);
+        return view('welcome', $config);
     }
 
     /**

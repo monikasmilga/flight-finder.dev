@@ -1,10 +1,9 @@
 <?php
+
+Route::get('/', ['as' => 'app.front-end.index', 'uses' => 'FFFrontEndController@index']);
+
+
 Auth::routes();
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin-check']], function () {
 
@@ -92,6 +91,5 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin-check']], fun
 Route::get('/home', function () {
     return view('home');
 });
-Route::get('/search', ['as' => 'app.front-end.index', 'uses' => 'FFFrontEndController@index']);
 
 
